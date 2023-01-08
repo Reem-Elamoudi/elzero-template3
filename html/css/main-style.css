@@ -84,7 +84,7 @@ header .list{
     }
 }
 header .list>li{
-    padding: 1em;
+    padding: .5em;
     transition: var(--transition);
     -webkit-transition: var(--transition);
     -moz-transition: var(--transition);
@@ -98,8 +98,8 @@ header .list li .line{
     width: 0px;
     display: block;
     position: relative;
-    top: -1em;
-    left: -1em;
+    top: -.5em;
+    left: -.5em;
     transition: var(--transition);
     -webkit-transition: var(--transition);
     -moz-transition: var(--transition);
@@ -111,7 +111,7 @@ header .list>li:hover{
     color: var(--main-color);
 }
 header .list li:hover>.line{
-    width: calc(100% + 2em);
+    width: calc(100% + 1em);
 } 
 .drop-list-content{
     position: absolute;
