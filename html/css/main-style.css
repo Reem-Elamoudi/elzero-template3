@@ -155,20 +155,14 @@ header .list li:hover>.line{
     .drop-list-ul ul{
         width: 100%;
     }
-    .drop-list-ul ul:last-child{
-        border-top: 1px solid #ddd;
-    }
 }
 .drop-list-ul ul li{
     padding: 1em;
-    border-bottom: 1px solid #ddd;
+    border-top: 1px solid #ddd;
     pointer-events: auto;
 }
 .drop-list-content:hover ul>li:not(:hover){
     opacity: .5;
-}
-.drop-list-ul ul li:last-child{
-    border: none;
 }
 .drop-list-ul ul li a{
     transition: var(--transition);
