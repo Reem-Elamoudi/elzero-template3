@@ -49,6 +49,7 @@ i:hover{
     --main-color: #2196f3;
     --section-background: #ececec;
     --padding-section: 100px;
+    --transition: .3s;
 }
 /* end globel style */
 
@@ -81,26 +82,55 @@ header .list{
         justify-content: center;
     }
 }
-header .list li{
+header .list>li{
     padding: 1em;
+    transition: var(--transition);
+    -webkit-transition: var(--transition);
+    -moz-transition: var(--transition);
+    -ms-transition: var(--transition);
+    -o-transition: var(--transition);
 }
+/* استخدمت السبان بدال البيفور والفتر عشان الريلاتيف بتخلي اليستة مكانها يكون بالنسبة لل الال اي و هي الاقرب الها ف بيخرب الشكل */
+header .list li .line{
+    background-color: var(--main-color);
+    height: 4px;
+    width: 0px;
+    display: block;
+    position: relative;
+    top: -1em;
+    left: -1em;
+    transition: var(--transition);
+    -webkit-transition: var(--transition);
+    -moz-transition: var(--transition);
+    -ms-transition: var(--transition);
+    -o-transition: var(--transition);
+}
+header .list>li:hover{
+    background-color: #fafafa;
+    color: var(--main-color);
+}
+header .list li:hover>.line{
+    width: calc(100% + 2em);
+} 
 .drop-list-content{
-    visibility: hidden;
     position: absolute;
     width: 100%;
-    top: calc(100% + 1rem);
+    top: 100%;
     right: 0px;
-    display: flex;
+    display: none;
     align-items: center;
     padding: 1em;
     color: var(--main-color);
     font-weight: 700;
     border-bottom: 3px solid var(--main-color);
-    pointer-events: none;
+    transition: var(--transition);
+    -webkit-transition: var(--transition);
+    -moz-transition: var(--transition);
+    -ms-transition: var(--transition);
+    -o-transition: var(--transition);
 }
 .drop-list:hover .drop-list-content{
-    top: 100%;
-    visibility: visible;
+    display: flex;
 }
 .drop-list-content img{
     width: 50%;
@@ -115,7 +145,6 @@ header .list li{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    transition: .3s;
     pointer-events: none;
 }
 .drop-list-ul ul{
@@ -139,6 +168,13 @@ header .list li{
 }
 .drop-list-ul ul li:last-child{
     border: none;
+}
+.drop-list-ul ul li a{
+    transition: var(--transition);
+    -webkit-transition: var(--transition);
+    -moz-transition: var(--transition);
+    -ms-transition: var(--transition);
+    -o-transition: var(--transition);
 }
 .drop-list-ul ul li:hover a{
     padding-left: 1em;
