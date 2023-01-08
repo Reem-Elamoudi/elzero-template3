@@ -80,6 +80,7 @@ header .list{
     }
     header .list{
         justify-content: center;
+        margin-top: .5rem;
     }
 }
 header .list>li{
